@@ -80,7 +80,8 @@ def start_popup_timer():
     while True:
         now = datetime.now().isoformat()
         due_words = [word for word in data['words'] if word['next_test_time'] <= now]
-        for word in due_words:
+        if due_words:
+            word = random.choice(due_words)
             show_popup(word)
         time.sleep(POPUP_INTERVAL)
 
