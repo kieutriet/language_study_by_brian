@@ -3,7 +3,7 @@ import random
 import time
 import tkinter as tk
 from datetime import datetime, timedelta
-from threading import Timer
+from threading import Timer, Thread
 
 DATA_FILE = 'language_data.json'
 POPUP_INTERVAL = 300  # 5 minutes
@@ -35,7 +35,7 @@ def schedule_next_test(word, response_time, correct):
         next_interval = timedelta(minutes=POPUP_INTERVAL * 4)
     elif word['consecutive_correct'] == 2:
         next_interval = timedelta(minutes=POPUP_INTERVAL * 2)
-    elif response_time < 5:
+    elif response_time < 5:  # 5 seconds
         next_interval = timedelta(minutes=POPUP_INTERVAL * 1.5)
     else:
         next_interval = timedelta(minutes=POPUP_INTERVAL)
@@ -50,10 +50,10 @@ def check_answer(word, user_input, response_time):
 
 # Show the popup
 def show_popup(word):
-    start_time = time.time()
+    start_time = time.time()  # Record the time when the popup appears
 
     def on_submit():
-        response_time = time.time() - start_time
+        response_time = time.time() - start_time  # Calculate the response time in seconds
         user_input = entry.get()
         if check_answer(word, user_input, response_time):
             result_label.config(text="Correct!")
@@ -69,7 +69,7 @@ def show_popup(word):
     prompt_label.pack(pady=10)
     entry = tk.Entry(root)
     entry.pack(pady=5)
-    submit_button = tk.Button(root, text="Submit", command(on_submit))
+    submit_button = tk.Button(root, text="Submit", command=on_submit)
     submit_button.pack(pady=5)
     result_label = tk.Label(root, text="")
     result_label.pack(pady=5)
@@ -96,13 +96,39 @@ def add_word(prompt, answer):
     data['words'].append(new_word)
     save_data(data)
 
-# Main function
-if __name__ == "__main__":
+# Function to open the add words window
+def open_add_words_window():
+    def add_words():
+        for prompt, answer in zip(prompts_entry.get("1.0", tk.END).strip().split("\n"), answers_entry.get("1.0", tk.END).strip().split("\n")):
+            add_word(prompt, answer)
+        add_window.destroy()
+
+    add_window = tk.Tk()
+    add_window.title("Add New Words")
+    add_window.geometry("400x300")
+    tk.Label(add_window, text="Prompts (one per line)").pack(pady=5)
+    prompts_entry = tk.Text(add_window, height=10)
+    prompts_entry.pack(pady=5)
+    tk.Label(add_window, text="Answers (one per line)").pack(pady=5)
+    answers_entry = tk.Text(add_window, height=10)
+    answers_entry.pack(pady=5)
+    tk.Button(add_window, text="Add", command=add_words).pack(pady=10)
+    add_window.mainloop()
+
+# Main function to start the application
+def main():
+    global data
     data = load_data()
-    
-    # Example to add a new word
-    add_word("Hello", "こんにちは")
-    
-    # Start the popup timer
-    popup_timer = Timer(POPUP_INTERVAL, start_popup_timer)
-    popup_timer.start()
+
+    main_window = tk.Tk()
+    main_window.title("Language Study App")
+    main_window.geometry("300x200")
+
+    tk.Button(main_window, text="Add New Words", command=open_add_words_window).pack(pady=10)
+    tk.Button(main_window, text="Start Study Session", command=lambda: Thread(target=start_popup_timer).start()).pack(pady=10)
+    tk.Button(main_window, text="Terminate", command=main_window.destroy).pack(pady=10)
+
+    main_window.mainloop()
+
+if __name__ == "__main__":
+    main()

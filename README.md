@@ -32,8 +32,11 @@
 
 * Use tkinter for creating a simple GUI popup.
 * Display the prompt and a textbox for user input.
+* Add a button to open this new window.
+* Add a button to terminate the program.
 
 ### Functionality to Add New Words:
 
 * Provide a separate interface for adding new words/prompts.
 * Update the JSON file with the new entries.
+* Add a separate window for adding new words: Use `tkinter` to create a new window for inputting multiple words and their corresponding answers.
