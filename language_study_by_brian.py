@@ -3,10 +3,12 @@ import random
 import time
 import tkinter as tk
 from datetime import datetime, timedelta
-from threading import Timer, Thread
+from threading import Timer, Thread, Event
 
 DATA_FILE = 'language_data.json'
 POPUP_INTERVAL = 300  # 5 minutes
+
+stop_event = Event()
 
 # Load data from JSON file
 def load_data():
@@ -77,13 +79,13 @@ def show_popup(word):
 
 # Trigger the popup at regular intervals
 def start_popup_timer():
-    while True:
+    while not stop_event.is_set():
         now = datetime.now().isoformat()
         due_words = [word for word in data['words'] if word['next_test_time'] <= now]
         if due_words:
             word = random.choice(due_words)
             show_popup(word)
-        time.sleep(POPUP_INTERVAL)
+        stop_event.wait(POPUP_INTERVAL)
 
 # Interface to add new words and prompts
 def add_word(prompt, answer):
@@ -125,9 +127,17 @@ def main():
     main_window.title("Language Study App")
     main_window.geometry("300x200")
 
+    def start_study_session():
+        study_thread = Thread(target=start_popup_timer)
+        study_thread.start()
+
+    def terminate_program():
+        stop_event.set()
+        main_window.destroy()
+
     tk.Button(main_window, text="Add New Words", command=open_add_words_window).pack(pady=10)
-    tk.Button(main_window, text="Start Study Session", command=lambda: Thread(target=start_popup_timer).start()).pack(pady=10)
-    tk.Button(main_window, text="Terminate", command=main_window.destroy).pack(pady=10)
+    tk.Button(main_window, text="Start Study Session", command=start_study_session).pack(pady=10)
+    tk.Button(main_window, text="Terminate", command=terminate_program).pack(pady=10)
 
     main_window.mainloop()
 
