@@ -13,6 +13,7 @@ POPUP_X = 1000  # Adjust based on screen resolution
 POPUP_Y = 700   # Adjust based on screen resolution
 ADD_WINDOW_WIDTH = 400
 ADD_WINDOW_HEIGHT = 600
+MAX_CONSECUTIVE_CORRECT = 10
 
 stop_event = Event()
 
@@ -31,22 +32,31 @@ def save_data(data):
 
 # Update the next test time based on performance
 def schedule_next_test(word, response_time, correct):
+    if 'today_consecutive_correct' not in word:
+        word['today_consecutive_correct'] = 0
+
     if correct:
         word['consecutive_correct'] += 1
+        word['today_consecutive_correct'] += 1
     else:
         word['consecutive_correct'] = 0
+        word['today_consecutive_correct'] = 0
 
     word['times_tested'] += 1
 
-    # Adjust interval based on performance
-    if word['consecutive_correct'] >= 3:
-        next_interval = timedelta(seconds=POPUP_INTERVAL * 4)
-    elif word['consecutive_correct'] == 2:
-        next_interval = timedelta(seconds=POPUP_INTERVAL * 2)
-    elif response_time < 5:  # 5 seconds
-        next_interval = timedelta(seconds=POPUP_INTERVAL * 1.5)
+    if word['today_consecutive_correct'] >= MAX_CONSECUTIVE_CORRECT:
+        next_interval = timedelta(days=1)  # Push to the following day
+        word['today_consecutive_correct'] = 0
     else:
-        next_interval = timedelta(seconds=POPUP_INTERVAL)
+        # Adjust interval based on performance
+        if word['consecutive_correct'] >= 3:
+            next_interval = timedelta(seconds=POPUP_INTERVAL * 4)
+        elif word['consecutive_correct'] == 2:
+            next_interval = timedelta(seconds=POPUP_INTERVAL * 2)
+        elif response_time < 5:  # 5 seconds
+            next_interval = timedelta(seconds=POPUP_INTERVAL * 1.5)
+        else:
+            next_interval = timedelta(seconds=POPUP_INTERVAL)
 
     word['next_test_time'] = (datetime.now() + next_interval).isoformat()
 
@@ -107,6 +117,7 @@ def add_word(prompt, answer):
         "answer": answer,
         "times_tested": 0,
         "consecutive_correct": 0,
+        "today_consecutive_correct": 0,
         "next_test_time": datetime.now().isoformat()
     }
     data['words'].append(new_word)
