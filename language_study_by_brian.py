@@ -92,7 +92,11 @@ def start_popup_timer():
         now = datetime.now().isoformat()
         due_words = [word for word in data['words'] if word['next_test_time'] <= now]
         if due_words:
-            word = random.choice(due_words)
+            # Sort due_words by next_test_time and keep the 50% earliest
+            due_words.sort(key=lambda word: word['next_test_time'])
+            cutoff = len(due_words) // 2
+            filtered_words = due_words[:cutoff]
+            word = random.choice(filtered_words)
             show_popup(word)
         stop_event.wait(POPUP_INTERVAL)
 
