@@ -16,6 +16,7 @@ ADD_WINDOW_HEIGHT = 600
 MAX_CONSECUTIVE_CORRECT = 10
 
 stop_event = Event()
+last_checked_date = datetime.now().date()
 
 # Load data from JSON file
 def load_data():
@@ -29,6 +30,15 @@ def load_data():
 def save_data(data):
     with open(DATA_FILE, 'w') as file:
         json.dump(data, file, indent=4)
+
+# Reset all 'today_consecutive_correct' when it's a new day
+def reset_today_consecutive_correct(data):
+    global last_checked_date
+    current_date = datetime.now().date()
+    if current_date != last_checked_date:
+        for word in data['words']:
+            word['today_consecutive_correct'] = 0
+        last_checked_date = current_date
 
 # Update the next test time based on performance
 def schedule_next_test(word, response_time, correct):
@@ -99,6 +109,7 @@ def show_popup(word):
 # Trigger the popup at regular intervals
 def start_popup_timer():
     while not stop_event.is_set():
+        reset_today_consecutive_correct(data)
         now = datetime.now().isoformat()
         due_words = [word for word in data['words'] if word['next_test_time'] <= now]
         if due_words:
