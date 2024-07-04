@@ -3,7 +3,7 @@ import random
 import time
 import tkinter as tk
 from datetime import datetime, timedelta
-from threading import Timer, Thread, Event
+from threading import Thread, Event
 
 DATA_FILE = 'language_data.json'
 POPUP_INTERVAL = 60  # 1 minute
@@ -16,18 +16,24 @@ ADD_WINDOW_HEIGHT = 600
 MAX_CONSECUTIVE_CORRECT = 10
 
 stop_event = Event()
-last_checked_date = datetime.now().date()
+last_checked_date = None
 
 # Load data from JSON file
 def load_data():
+    global last_checked_date
     try:
         with open(DATA_FILE, 'r') as file:
-            return json.load(file)
+            data = json.load(file)
+            last_checked_date_str = data.get('last_checked_date', datetime.now().isoformat().split('T')[0])
+            last_checked_date = datetime.strptime(last_checked_date_str, "%Y-%m-%d").date()
+            return data
     except FileNotFoundError:
-        return {"words": []}
+        last_checked_date = datetime.now().date()
+        return {"words": [], "last_checked_date": last_checked_date.isoformat()}
 
 # Save data to JSON file
 def save_data(data):
+    data['last_checked_date'] = last_checked_date.isoformat()
     with open(DATA_FILE, 'w') as file:
         json.dump(data, file, indent=4)
 
@@ -113,8 +119,8 @@ def start_popup_timer():
         now = datetime.now().isoformat()
         due_words = [word for word in data['words'] if word['next_test_time'] <= now]
         if due_words:
-            # Sort due_words by next_test_time and keep the 50% earliest
-            due_words.sort(key=lambda word: word['next_test_time'])
+            # Sort due_words by consecutive_correct and next_test_time
+            due_words.sort(key=lambda word: (word['consecutive_correct'], word['next_test_time']))
             cutoff = len(due_words) // 2
             filtered_words = due_words[:cutoff]
             word = random.choice(filtered_words)
