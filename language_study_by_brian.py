@@ -2,10 +2,11 @@ import json
 import random
 import time
 import tkinter as tk
+from tkinter import filedialog
 from datetime import datetime, timedelta
 from threading import Thread, Event
 
-DATA_FILE = 'language_data.json'
+DEFAULT_DATA_FILE = 'language_data.json'
 POPUP_INTERVAL = 60  # 1 minute
 POPUP_WIDTH = 400
 POPUP_HEIGHT = 150
@@ -17,24 +18,25 @@ MAX_CONSECUTIVE_CORRECT = 10
 
 stop_event = Event()
 last_checked_date = None
+data_file = DEFAULT_DATA_FILE
+data = {}
 
 # Load data from JSON file
-def load_data():
+def load_data(file_path):
     global last_checked_date
     try:
-        with open(DATA_FILE, 'r') as file:
+        with open(file_path, 'r') as file:
             data = json.load(file)
-            last_checked_date_str = data.get('last_checked_date', datetime.now().isoformat().split('T')[0])
-            last_checked_date = datetime.strptime(last_checked_date_str, "%Y-%m-%d").date()
+            last_checked_date = datetime.strptime(data.get('last_checked_date', datetime.now().isoformat()), "%Y-%m-%d").date()
             return data
     except FileNotFoundError:
         last_checked_date = datetime.now().date()
         return {"words": [], "last_checked_date": last_checked_date.isoformat()}
 
 # Save data to JSON file
-def save_data(data):
+def save_data(data, file_path):
     data['last_checked_date'] = last_checked_date.isoformat()
-    with open(DATA_FILE, 'w') as file:
+    with open(file_path, 'w') as file:
         json.dump(data, file, indent=4)
 
 # Reset all 'today_consecutive_correct' when it's a new day
@@ -93,7 +95,7 @@ def show_popup(word):
             result_label.config(text="Correct!")
         else:
             result_label.config(text=f"Try again! Correct answer: {word['answer']}")
-        save_data(data)
+        save_data(data, data_file)
         root.after(2000, root.destroy)  # Close after 2 seconds
 
     root = tk.Tk()
@@ -138,7 +140,7 @@ def add_word(prompt, answer):
         "next_test_time": datetime.now().isoformat()
     }
     data['words'].append(new_word)
-    save_data(data)
+    save_data(data, data_file)
 
 # Function to open the add words window
 def open_add_words_window():
@@ -159,10 +161,18 @@ def open_add_words_window():
     tk.Button(add_window, text="Add", command=add_words).pack(pady=10)
     add_window.mainloop()
 
+# Function to select a JSON file
+def select_json_file():
+    global data_file, data
+    file_path = filedialog.askopenfilename(filetypes=[("JSON files", "*.json")])
+    if file_path:
+        data_file = file_path
+        data = load_data(data_file)
+
 # Main function to start the application
 def main():
     global data
-    data = load_data()
+    data = load_data(data_file)
 
     main_window = tk.Tk()
     main_window.title("Language Study App")
@@ -176,6 +186,7 @@ def main():
         stop_event.set()
         main_window.destroy()
 
+    tk.Button(main_window, text="Select JSON File", command=select_json_file).pack(pady=10)
     tk.Button(main_window, text="Add New Words", command=open_add_words_window).pack(pady=10)
     tk.Button(main_window, text="Start Study Session", command=start_study_session).pack(pady=10)
     tk.Button(main_window, text="Terminate", command=terminate_program).pack(pady=10)
