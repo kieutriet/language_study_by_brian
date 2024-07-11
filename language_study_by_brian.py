@@ -125,6 +125,7 @@ def start_popup_timer():
             due_words.sort(key=lambda word: (word['consecutive_correct'], word['next_test_time']))
             cutoff = len(due_words) // 2
             filtered_words = due_words[:cutoff]
+            print([word['answer'] for word in filtered_words])
             word = random.choice(filtered_words)
             show_popup(word)
         stop_event.wait(POPUP_INTERVAL)
