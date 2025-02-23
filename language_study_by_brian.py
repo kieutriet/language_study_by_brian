@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from threading import Thread, Event
 
 DEFAULT_DATA_FILE = 'language_data.json'
-POPUP_INTERVAL = 60  # 1 minute
+POPUP_INTERVAL = 30  # 0.5 minute
 POPUP_WIDTH = 400
 POPUP_HEIGHT = 150
 POPUP_X = 1200  # Adjust based on screen resolution
@@ -39,48 +39,38 @@ def save_data(data, file_path):
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=4)
 
-# Reset all 'today_consecutive_correct' when it's a new day
-def reset_today_consecutive_correct(data):
+def update_last_checked_date(data):
     global last_checked_date
     current_date = datetime.now().date()
     if current_date != last_checked_date:
-        for word in data['words']:
-            word['today_consecutive_correct'] = 0
         last_checked_date = current_date
 
 # Update the next test time based on performance
 def schedule_next_test(word, response_time, correct):
-    if 'today_consecutive_correct' not in word:
-        word['today_consecutive_correct'] = 0
     if 'results' not in word:
         word['results'] = ''
 
     if correct:
         word['consecutive_correct'] += 1
-        word['today_consecutive_correct'] += 1
         word['results'] += '+'
     else:
         word['consecutive_correct'] = 0
-        word['today_consecutive_correct'] = 0
         word['results'] += '-'
 
     word['times_tested'] += 1
 
-    if word['today_consecutive_correct'] >= MAX_CONSECUTIVE_CORRECT:
-        next_interval = timedelta(days=1)  # Push to the following day
-        word['today_consecutive_correct'] = 0
-    else:
-        # Adjust interval based on performance
-        if word['consecutive_correct'] >= 3:
-            next_interval = timedelta(seconds=POPUP_INTERVAL * 4)
-        elif word['consecutive_correct'] == 2:
-            next_interval = timedelta(seconds=POPUP_INTERVAL * 2)
-        elif response_time < 5:  # 5 seconds
-            next_interval = timedelta(seconds=POPUP_INTERVAL * 1.5)
-        else:
-            next_interval = timedelta(seconds=POPUP_INTERVAL)
 
-    word['next_test_time'] = (datetime.now() + next_interval).isoformat()
+    # Adjust interval based on performance
+    if word['consecutive_correct'] >= 3:
+        next_interval = timedelta(seconds=POPUP_INTERVAL * 4)
+    elif word['consecutive_correct'] == 2:
+        next_interval = timedelta(seconds=POPUP_INTERVAL * 2)
+    elif response_time < 5:  # 5 seconds
+        next_interval = timedelta(seconds=POPUP_INTERVAL * 1.5)
+    else:
+        next_interval = timedelta(seconds=POPUP_INTERVAL)
+
+    word['next_possible_test_time'] = (datetime.now() + next_interval).isoformat()
 
 # Check user input and update progress
 def check_answer(word, user_input, response_time):
@@ -125,12 +115,12 @@ def show_popup(word):
 # Trigger the popup at regular intervals
 def start_popup_timer():
     while not stop_event.is_set():
-        reset_today_consecutive_correct(data)
+        update_last_checked_date(data)
         now = datetime.now().isoformat()
-        due_words = [word for word in data['words'] if word['next_test_time'] <= now]
+        due_words = [word for word in data['words'] if word['next_possible_test_time'] <= now]
         if due_words:
-            # Sort due_words by consecutive_correct and next_test_time
-            due_words.sort(key=lambda word: (word['next_test_time'], word['consecutive_correct']))
+            # Sort due_words by consecutive_correct and next_possible_test_time
+            due_words.sort(key=lambda word: (word['next_possible_test_time'], word['consecutive_correct']))
             cutoff = len(due_words) // 2
             filtered_words = due_words[:cutoff]
             word = random.choice(filtered_words)
@@ -146,16 +136,19 @@ def add_word(prompt, answer, example=None):
         "answer": answer,
         "times_tested": 0,
         "consecutive_correct": 0,
-        "today_consecutive_correct": 0,
         "results": '',
+        "response_time": [],
+        "response_time_trend": 'stable',
         "accuracy_over_time": 0,
-        "accuracy_latest": 0,
-        "last_check_date": datetime.now().isoformat(),
-        "last_successful_retrieve": datetime.now().isoformat(),
-        "longest_streak": 0,  # in days
+        "accuracy_last_N": 0,
+        "retention_longest": 0,  # number of days able to recall
         "retention_strength": "Weak",
-        "difficulty_level": "Easy",
-        "next_test_time": datetime.now().isoformat()
+        "difficulty_score": 0,
+        "difficulty_level": "Easy", # low response time, high accuracy, high retention
+        "review_frequency": "Minutely", #30-Sec, Minutely, 30-Min, Hourly, Daily, 3-Day, Weekly, 2-Week, Monthly
+        "last_check_date": datetime.now().isoformat(),
+        "last_successful_recall": datetime.now().isoformat(),
+        "next_possible_test_time": datetime.now().isoformat()
     }
     data['words'].append(new_word)
     save_data(data, data_file)
