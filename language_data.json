@@ -3,10 +3,11 @@
         {
             "prompt": "combine to produce a particular result or effect",
             "answer": "add up to",
-            "times_tested": 11,
-            "consecutive_correct": 11,
-            "next_test_time": "2024-07-03T11:54:57.406694",
-            "today_consecutive_correct": 0
+            "times_tested": 12,
+            "consecutive_correct": 12,
+            "next_test_time": "2024-07-22T08:21:31.918850",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "if separate amounts add up to a total amount, together they form that total",
@@ -35,10 +36,11 @@
         {
             "prompt": "stop asking for something or stop saying that you will do something, because a lot of people oppose you",
             "answer": "back down",
-            "times_tested": 13,
-            "consecutive_correct": 6,
-            "next_test_time": "2024-07-05T17:06:40.441361",
-            "today_consecutive_correct": 0
+            "times_tested": 14,
+            "consecutive_correct": 7,
+            "next_test_time": "2024-07-22T08:23:53.512120",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "give support to someone by telling other people that you agree with them",
@@ -75,10 +77,11 @@
         {
             "prompt": "if someone or something blends in, they are similar to the other people, objects, buildings, etc. around them, and so they seem appropriate or you do not notice them",
             "answer": "blend in",
-            "times_tested": 11,
-            "consecutive_correct": 11,
-            "next_test_time": "2024-07-03T15:51:18.850114",
-            "today_consecutive_correct": 0
+            "times_tested": 12,
+            "consecutive_correct": 12,
+            "next_test_time": "2024-07-22T08:29:45.489933",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "say something suddenly and without thinking about the effect it will have, usually because you are nervous or excited",
@@ -91,10 +94,11 @@
         {
             "prompt": "cover a window or door with wooden boards",
             "answer": "board up",
-            "times_tested": 8,
-            "consecutive_correct": 8,
-            "next_test_time": "2024-07-03T14:01:33.397339",
-            "today_consecutive_correct": 0
+            "times_tested": 9,
+            "consecutive_correct": 9,
+            "next_test_time": "2024-10-24T17:18:49.861505",
+            "today_consecutive_correct": 1,
+            "results": "+"
         },
         {
             "prompt": "divide something such as a total amount into separate parts",
@@ -163,18 +167,20 @@
         {
             "prompt": "make someone or something show a quality that they have",
             "answer": "bring out",
-            "times_tested": 8,
-            "consecutive_correct": 4,
-            "next_test_time": "2024-07-05T16:52:53.225212",
-            "today_consecutive_correct": 0
+            "times_tested": 12,
+            "consecutive_correct": 3,
+            "next_test_time": "2024-07-21T11:11:24.378732",
+            "today_consecutive_correct": 0,
+            "results": "-+++"
         },
         {
             "prompt": "produce a new product and start to sell it",
             "answer": "bring out",
-            "times_tested": 8,
-            "consecutive_correct": 4,
-            "next_test_time": "2024-07-05T16:52:53.225212",
-            "today_consecutive_correct": 0
+            "times_tested": 9,
+            "consecutive_correct": 5,
+            "next_test_time": "2024-07-22T08:22:43.054195",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "create a situation in which people meet and do something together, especially when they would not usually do so",
@@ -187,10 +193,11 @@
         {
             "prompt": "practise and improve your skills or knowledge of something",
             "answer": "brush up (on)",
-            "times_tested": 9,
-            "consecutive_correct": 9,
-            "next_test_time": "2024-07-03T16:04:09.365756",
-            "today_consecutive_correct": 0
+            "times_tested": 10,
+            "consecutive_correct": 10,
+            "next_test_time": "2024-07-22T08:27:29.437021",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "gradually develop",
@@ -211,18 +218,20 @@
         {
             "prompt": "make someone, healthier and stronger, especially by making them eat more",
             "answer": "build up",
-            "times_tested": 6,
-            "consecutive_correct": 5,
-            "next_test_time": "2024-07-05T17:04:11.054224",
-            "today_consecutive_correct": 0
+            "times_tested": 7,
+            "consecutive_correct": 0,
+            "next_test_time": "2024-07-22T08:23:18.682300",
+            "today_consecutive_correct": 0,
+            "results": "-"
         },
         {
             "prompt": "talk about someone or something in a very positive way so that people are impressed with them",
             "answer": "build up",
-            "times_tested": 8,
-            "consecutive_correct": 4,
-            "next_test_time": "2024-07-09T11:56:50.612999",
-            "today_consecutive_correct": 0
+            "times_tested": 9,
+            "consecutive_correct": 0,
+            "next_test_time": "2024-07-21T11:50:27.162536",
+            "today_consecutive_correct": 0,
+            "results": "-"
         },
         {
             "prompt": "accidentally hit against something",
@@ -235,18 +244,20 @@
         {
             "prompt": "meet someone unexpectedly",
             "answer": "bump into",
-            "times_tested": 6,
-            "consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:47:15.336709",
-            "today_consecutive_correct": 0
+            "times_tested": 7,
+            "consecutive_correct": 1,
+            "next_test_time": "2024-07-21T11:09:34.905454",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "give someone money so that they do not act against you",
             "answer": "buy off",
-            "times_tested": 11,
-            "consecutive_correct": 3,
-            "next_test_time": "2024-07-09T10:23:28.130416",
-            "today_consecutive_correct": 0
+            "times_tested": 12,
+            "consecutive_correct": 4,
+            "next_test_time": "2024-07-20T22:18:11.234408",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "pay money to buy your business partner so that you can control all of a business you previously owned together",
@@ -259,18 +270,20 @@
         {
             "prompt": "buy large amounts of something or all of it that is available",
             "answer": "buy up",
-            "times_tested": 9,
-            "consecutive_correct": 3,
-            "next_test_time": "2024-07-09T10:25:45.738238",
-            "today_consecutive_correct": 0
+            "times_tested": 10,
+            "consecutive_correct": 4,
+            "next_test_time": "2024-07-20T22:21:12.637517",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "stop something from having any effect",
             "answer": "cancel out",
-            "times_tested": 8,
-            "consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:53:05.362550",
-            "today_consecutive_correct": 0
+            "times_tested": 11,
+            "consecutive_correct": 3,
+            "next_test_time": "2024-07-21T11:46:30.787832",
+            "today_consecutive_correct": 0,
+            "results": "+++"
         },
         {
             "prompt": "take something that you can carry or give in one year or period of time into the next one or year",
@@ -283,18 +296,20 @@
         {
             "prompt": "become popular or fashionable",
             "answer": "catch on",
-            "times_tested": 9,
-            "consecutive_correct": 0,
-            "next_test_time": "2024-07-20T18:59:56.994958",
-            "today_consecutive_correct": 0
+            "times_tested": 10,
+            "consecutive_correct": 1,
+            "next_test_time": "2024-07-20T23:24:08.054285",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "understand",
             "answer": "catch on",
-            "times_tested": 1,
+            "times_tested": 3,
             "consecutive_correct": 0,
-            "next_test_time": "2024-07-09T10:27:23.527935",
-            "today_consecutive_correct": 0
+            "next_test_time": "2024-07-21T11:06:09.361170",
+            "today_consecutive_correct": 0,
+            "results": "--"
         },
         {
             "prompt": "if something centres around someone or something, or you centre something around them, they are its main subject or attention centre",
@@ -307,10 +322,11 @@
         {
             "prompt": "find someone or something so that where you did not expect to",
             "answer": "chance upon",
-            "times_tested": 2,
-            "consecutive_correct": 0,
-            "next_test_time": "2024-07-08T11:16:50.838990",
-            "today_consecutive_correct": 0
+            "times_tested": 4,
+            "consecutive_correct": 1,
+            "next_test_time": "2024-07-21T11:29:25.438250",
+            "today_consecutive_correct": 0,
+            "results": "-+"
         },
         {
             "prompt": "move things around so that they are in different places or positions",
@@ -326,23 +342,25 @@
             "times_tested": 10,
             "consecutive_correct": 4,
             "next_test_time": "2024-07-20T19:07:41.679778",
-            "today_consecutive_correct": 1
+            "today_consecutive_correct": 0
         },
         {
             "prompt": "take off the clothes or a piece of clothing you are wearing and put on different ones (inward)",
             "answer": "change into",
-            "times_tested": 12,
-            "consecutive_correct": 2,
-            "next_test_time": "2024-07-08T10:48:13.271999",
-            "today_consecutive_correct": 0
+            "times_tested": 13,
+            "consecutive_correct": 3,
+            "next_test_time": "2024-07-21T11:40:47.613519",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "take off the clothes or a piece of clothing you are wearing and put on different ones (outward)",
             "answer": "change out of",
-            "times_tested": 10,
-            "consecutive_correct": 4,
-            "next_test_time": "2024-07-18T08:09:11.602482",
-            "today_consecutive_correct": 0
+            "times_tested": 11,
+            "consecutive_correct": 5,
+            "next_test_time": "2024-07-21T11:28:38.618380",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "examine someone or something in order to be certain that everything is correct, true or satisfactory",
@@ -363,73 +381,81 @@
         {
             "prompt": "reach a particular number or amount",
             "answer": "clock up",
-            "times_tested": 8,
-            "consecutive_correct": 5,
-            "next_test_time": "2024-07-05T17:00:42.745187",
-            "today_consecutive_correct": 0
+            "times_tested": 9,
+            "consecutive_correct": 6,
+            "next_test_time": "2024-07-22T08:33:11.929839",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "lock the doors of a building or business",
             "answer": "close up",
-            "times_tested": 10,
-            "consecutive_correct": 4,
-            "next_test_time": "2024-07-09T11:38:34.070807",
-            "today_consecutive_correct": 0
+            "times_tested": 11,
+            "consecutive_correct": 5,
+            "next_test_time": "2024-07-21T11:41:57.994367",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "group together to spend money on something",
             "answer": "club together",
-            "times_tested": 4,
-            "consecutive_correct": 3,
+            "times_tested": 5,
+            "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:45:07.711441"
+            "next_test_time": "2024-07-20T22:15:52.654281",
+            "results": "+"
         },
         {
             "prompt": "find something or someone by chance",
             "answer": "come across",
-            "times_tested": 7,
-            "consecutive_correct": 0,
+            "times_tested": 10,
+            "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T16:34:27.034452"
+            "next_test_time": "2024-07-22T08:17:58.331498",
+            "results": "-++"
         },
         {
             "prompt": "change your opinion or decision because someone has persuaded you to agree (3 words)",
             "answer": "come (a)round (to)",
-            "times_tested": 6,
-            "consecutive_correct": 4,
-            "today_consecutive_correct": 3,
-            "next_test_time": "2024-07-20T17:54:54.712793"
+            "times_tested": 7,
+            "consecutive_correct": 5,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-22T08:25:09.632873",
+            "results": "+"
         },
         {
             "prompt": "cause a disagreement or argument between people",
             "answer": "come between",
-            "times_tested": 5,
-            "consecutive_correct": 3,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T17:47:44.988527"
+            "times_tested": 6,
+            "consecutive_correct": 4,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-20T22:35:34.788062",
+            "results": "+"
         },
         {
             "prompt": "be removed from something such as clothing or cloth by washing or rubbing",
             "answer": "come out",
-            "times_tested": 6,
-            "consecutive_correct": 2,
-            "today_consecutive_correct": 2,
-            "next_test_time": "2024-07-20T19:03:15.855793"
+            "times_tested": 8,
+            "consecutive_correct": 4,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-21T11:06:36.580116",
+            "results": "++"
         },
         {
             "prompt": "be spoken, heard or understood in a particular way",
             "answer": "come out",
-            "times_tested": 4,
-            "consecutive_correct": 4,
+            "times_tested": 5,
+            "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-09T12:01:52.726848"
+            "next_test_time": "2024-07-20T22:33:15.776538",
+            "results": "+"
         },
         {
             "prompt": "become available to buy or see",
             "answer": "come out",
             "times_tested": 4,
             "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
+            "today_consecutive_correct": 0,
             "next_test_time": "2024-07-20T16:49:18.179437"
         },
         {
@@ -437,40 +463,44 @@
             "answer": "come out",
             "times_tested": 4,
             "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
+            "today_consecutive_correct": 0,
             "next_test_time": "2024-07-20T16:44:27.096186"
         },
         {
             "prompt": "result or end in a particular way",
             "answer": "come out",
-            "times_tested": 9,
-            "consecutive_correct": 0,
+            "times_tested": 12,
+            "consecutive_correct": 3,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:51:29.296143"
+            "next_test_time": "2024-07-21T11:27:29.605903",
+            "results": "+++"
         },
         {
             "prompt": "become known",
             "answer": "come out",
-            "times_tested": 4,
-            "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T16:51:33.585943"
+            "times_tested": 5,
+            "consecutive_correct": 5,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-22T08:28:38.569550",
+            "results": "+"
         },
         {
             "prompt": "visit someone, especially at their house",
             "answer": "come round",
-            "times_tested": 3,
-            "consecutive_correct": 3,
+            "times_tested": 6,
+            "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-09T10:20:59.134996"
+            "next_test_time": "2024-07-21T11:43:24.123479",
+            "results": "-++"
         },
         {
             "prompt": "occur again as a regular event",
             "answer": "come round",
-            "times_tested": 3,
-            "consecutive_correct": 0,
+            "times_tested": 5,
+            "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:57:54.244961"
+            "next_test_time": "2024-07-21T11:21:16.760647",
+            "results": "++"
         },
         {
             "prompt": "think of something such as an idea or plan",
@@ -483,42 +513,47 @@
         {
             "prompt": "become cooler, or make something cooler",
             "answer": "cool down",
-            "times_tested": 4,
-            "consecutive_correct": 0,
+            "times_tested": 5,
+            "consecutive_correct": 1,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:57:12.576424"
+            "next_test_time": "2024-07-21T11:07:17.272020",
+            "results": "+"
         },
         {
             "prompt": "stop people from entering an area by putting something such as a rope around it",
             "answer": "cordon off",
-            "times_tested": 5,
-            "consecutive_correct": 3,
+            "times_tested": 6,
+            "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-09T10:28:02.496696"
+            "next_test_time": "2024-07-20T22:50:45.076664",
+            "results": "-"
         },
         {
             "prompt": "start dealing with someone or something much more strictly",
             "answer": "crack down (on)",
-            "times_tested": 6,
-            "consecutive_correct": 0,
+            "times_tested": 8,
+            "consecutive_correct": 1,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T19:03:30.787297"
+            "next_test_time": "2024-07-21T11:48:05.844321",
+            "results": "-+"
         },
         {
             "prompt": "laugh a lot, or make someone laugh a lot",
             "answer": "crease up",
-            "times_tested": 4,
-            "consecutive_correct": 4,
+            "times_tested": 5,
+            "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:42:42.464095"
+            "next_test_time": "2024-07-21T11:21:43.111940",
+            "results": "+"
         },
         {
             "prompt": "move towards someone quietly and slowly, especially you want to surprise them",
             "answer": "creep up on",
-            "times_tested": 4,
-            "consecutive_correct": 1,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T18:57:21.596323"
+            "times_tested": 5,
+            "consecutive_correct": 0,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-20T23:21:41.264824",
+            "results": "-"
         },
         {
             "prompt": "appear or happen suddenly or unexpectedly",
@@ -531,66 +566,74 @@
         {
             "prompt": "move to a particular place at the same time as a lot of other people",
             "answer": "crowd around",
-            "times_tested": 3,
-            "consecutive_correct": 3,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T18:58:54.779112"
+            "times_tested": 4,
+            "consecutive_correct": 4,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-21T11:24:26.943682",
+            "results": "+"
         },
         {
             "prompt": "reduce the amount of something, especially money that you spend",
             "answer": "cut back (on)",
-            "times_tested": 5,
+            "times_tested": 6,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T16:43:55.558707"
+            "next_test_time": "2024-07-20T22:53:54.439528",
+            "results": "-"
         },
         {
             "prompt": "remove something from a larger piece by cutting",
             "answer": "cut out",
-            "times_tested": 4,
-            "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T17:00:41.950257"
+            "times_tested": 5,
+            "consecutive_correct": 5,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-21T11:48:49.594957",
+            "results": "+"
         },
         {
             "prompt": "stop something or doing something, especially because it is bad for your health",
             "answer": "cut out",
-            "times_tested": 6,
+            "times_tested": 7,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:01:31.324261"
+            "next_test_time": "2024-07-21T11:40:07.401882",
+            "results": "-"
         },
         {
             "prompt": "become weaker or less common and then disappear completely",
             "answer": "die out",
-            "times_tested": 4,
-            "consecutive_correct": 4,
+            "times_tested": 5,
+            "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-11T01:14:40.390508"
+            "next_test_time": "2024-07-21T11:44:15.347212",
+            "results": "+"
         },
         {
             "prompt": "dig holes in an area of land",
             "answer": "dig up",
-            "times_tested": 4,
-            "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T17:36:48.317377"
+            "times_tested": 5,
+            "consecutive_correct": 5,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-22T08:30:52.253012",
+            "results": "+"
         },
         {
             "prompt": "find information by searching carefully",
             "answer": "dig up",
-            "times_tested": 2,
+            "times_tested": 3,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:35:57.339745"
+            "next_test_time": "2024-07-21T11:11:52.992305",
+            "results": "-"
         },
         {
             "prompt": "remove something from under the ground by digging",
             "answer": "dig up",
-            "times_tested": 3,
-            "consecutive_correct": 3,
+            "times_tested": 4,
+            "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-09T11:36:17.406250"
+            "next_test_time": "2024-07-20T22:30:55.199438",
+            "results": "+"
         },
         {
             "prompt": "start doing something in a busy and enthusiastic way",
@@ -629,31 +672,33 @@
             "answer": "dry up",
             "times_tested": 4,
             "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
+            "today_consecutive_correct": 0,
             "next_test_time": "2024-07-20T17:57:14.438397"
         },
         {
             "prompt": "stop being available",
             "answer": "dry up",
-            "times_tested": 7,
-            "consecutive_correct": 1,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T17:03:53.815805"
+            "times_tested": 11,
+            "consecutive_correct": 3,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-21T11:49:56.040397",
+            "results": "-+++"
         },
         {
             "prompt": "stop talking because you have forgotten what you were going to say",
             "answer": "dry up",
-            "times_tested": 4,
-            "consecutive_correct": 4,
+            "times_tested": 5,
+            "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-09T11:46:22.913763"
+            "next_test_time": "2024-07-21T11:34:45.480590",
+            "results": "+"
         },
         {
             "prompt": "be in a particular place or state after doing something or because of doing it",
             "answer": "end up",
             "times_tested": 4,
             "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
+            "today_consecutive_correct": 0,
             "next_test_time": "2024-07-20T16:48:05.035884"
         },
         {
@@ -667,50 +712,56 @@
         {
             "prompt": "disappear slowly",
             "answer": "fade away",
-            "times_tested": 4,
-            "consecutive_correct": 2,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T17:51:42.902902"
+            "times_tested": 5,
+            "consecutive_correct": 3,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-22T08:34:23.215137",
+            "results": "+"
         },
         {
             "prompt": "make less progress or be less successful than other people who are doing a similar job or activity",
             "answer": "fall behind",
-            "times_tested": 4,
-            "consecutive_correct": 4,
+            "times_tested": 5,
+            "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-10T14:35:25.444047"
+            "next_test_time": "2024-07-20T22:36:49.413744",
+            "results": "+"
         },
         {
             "prompt": "move slowly than other people so that you are behind them",
             "answer": "fall behind",
-            "times_tested": 2,
-            "consecutive_correct": 2,
+            "times_tested": 3,
+            "consecutive_correct": 3,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-08T11:06:23.958303"
+            "next_test_time": "2024-07-21T11:38:11.189953",
+            "results": "+"
         },
         {
             "prompt": "understand something or solve a problem or understand what someone is like and why they behave in the way they do",
             "answer": "figure out",
-            "times_tested": 4,
-            "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
-            "next_test_time": "2024-07-20T17:01:54.497050"
+            "times_tested": 5,
+            "consecutive_correct": 5,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-21T11:52:15.625475",
+            "results": "+"
         },
         {
             "prompt": "repair or decorate something",
             "answer": "fix up",
-            "times_tested": 4,
-            "consecutive_correct": 4,
+            "times_tested": 5,
+            "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-11T01:16:55.893421"
+            "next_test_time": "2024-07-21T11:19:15.311347",
+            "results": "+"
         },
         {
             "prompt": "check the health of someone who has received medical treatment to order to be certain that it was effective",
             "answer": "follow up",
-            "times_tested": 1,
-            "consecutive_correct": 1,
+            "times_tested": 2,
+            "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-07T12:42:57.406061"
+            "next_test_time": "2024-07-21T11:11:43.904391",
+            "results": "+"
         },
         {
             "prompt": "try to find out more about something or do something more to deal with it",
@@ -723,10 +774,11 @@
         {
             "prompt": "make people understand something",
             "answer": "get across",
-            "times_tested": 5,
-            "consecutive_correct": 0,
+            "times_tested": 6,
+            "consecutive_correct": 1,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:34:59.318712"
+            "next_test_time": "2024-07-20T22:24:20.046161",
+            "results": "+"
         },
         {
             "prompt": "if news gets around, a lot of people hear it",
@@ -739,49 +791,53 @@
         {
             "prompt": "make someone feel sad or lose hope",
             "answer": "get down",
-            "times_tested": 3,
+            "times_tested": 4,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:50:15.854987"
+            "next_test_time": "2024-07-22T08:29:04.906432",
+            "results": "-"
         },
         {
             "prompt": "be elected for a political job",
             "answer": "get in",
-            "times_tested": 0,
+            "times_tested": 1,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-06T17:40:03.770299"
+            "next_test_time": "2024-07-20T22:37:36.876320",
+            "results": "-"
         },
         {
             "prompt": "become involved in a bad situation",
             "answer": "get into",
             "times_tested": 3,
             "consecutive_correct": 2,
-            "today_consecutive_correct": 2,
+            "today_consecutive_correct": 0,
             "next_test_time": "2024-07-20T19:02:07.636822"
         },
         {
             "prompt": "if a train, plane, etc gets into a place, it arrives there",
             "answer": "get into",
-            "times_tested": 4,
-            "consecutive_correct": 4,
+            "times_tested": 5,
+            "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-09T11:39:55.928171"
+            "next_test_time": "2024-07-21T11:35:53.206427",
+            "results": "+"
         },
         {
             "prompt": "start enjoying something or become enthusiastic about it",
             "answer": "get into",
-            "times_tested": 7,
-            "consecutive_correct": 2,
-            "today_consecutive_correct": 2,
-            "next_test_time": "2024-07-20T17:59:24.351363"
+            "times_tested": 8,
+            "consecutive_correct": 3,
+            "today_consecutive_correct": 0,
+            "next_test_time": "2024-07-21T10:07:11.874007",
+            "results": "+"
         },
         {
             "prompt": "leave a particular period of time as a holiday",
             "answer": "get off",
             "times_tested": 4,
             "consecutive_correct": 4,
-            "today_consecutive_correct": 1,
+            "today_consecutive_correct": 0,
             "next_test_time": "2024-07-20T17:52:32.157258"
         },
         {
@@ -795,26 +851,29 @@
         {
             "prompt": "send something, for example in the post",
             "answer": "get off",
-            "times_tested": 3,
-            "consecutive_correct": 3,
+            "times_tested": 4,
+            "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-08T12:02:42.541436"
+            "next_test_time": "2024-07-20T22:25:58.866003",
+            "results": "+"
         },
         {
             "prompt": "become covered in spots because you are ill or your body reacts to a food or medicine",
             "answer": "come out in",
-            "times_tested": 5,
-            "consecutive_correct": 2,
+            "times_tested": 7,
+            "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:56:16.487493"
+            "next_test_time": "2024-07-21T11:37:02.652993",
+            "results": "++"
         },
         {
             "prompt": "say something suddenly, usually something that surprises or shocks people",
             "answer": "come out with ",
-            "times_tested": 4,
+            "times_tested": 5,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T17:08:36.269192"
+            "next_test_time": "2024-07-21T11:17:24.405615",
+            "results": "-"
         },
         {
             "prompt": "become conscious again after being unconscious",
@@ -833,5 +892,5 @@
             "next_test_time": "2024-07-17T16:34:48.041826"
         }
     ],
-    "last_checked_date": "2024-07-20"
+    "last_checked_date": "2024-10-24"
 }
