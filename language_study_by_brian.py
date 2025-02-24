@@ -9,12 +9,13 @@ from threading import Thread, Event
 DEFAULT_DATA_FILE = 'language_data.json'
 POPUP_INTERVAL = 30  # 0.5 minute
 POPUP_WIDTH = 400
-POPUP_HEIGHT = 150
+POPUP_HEIGHT = 200
 POPUP_X = 1200  # Adjust based on screen resolution
 POPUP_Y = 800   # Adjust based on screen resolution
 ADD_WINDOW_WIDTH = 800
 ADD_WINDOW_HEIGHT = 700
 MAX_CONSECUTIVE_CORRECT = 5
+NUMBER_OF_WORDS_PER_SESSION = 20
 
 stop_event = Event()
 last_checked_date = None
@@ -70,25 +71,37 @@ def schedule_next_test(word, response_time, correct):
     else:
         next_interval = timedelta(seconds=POPUP_INTERVAL)
 
+
     word['next_possible_test_time'] = (datetime.now() + next_interval).isoformat()
 
 # Check user input and update progress
 def check_answer(word, user_input, response_time):
-    correct = user_input.strip().lower() == word['answer'].strip().lower()
+    correct = user_input.strip().lower() == word['answer'].strip().lower() or user_input.strip() == '.'
     schedule_next_test(word, response_time, correct)
     return correct
 
 # Show the popup
 def show_popup(word):
-    start_time = time.time()  # Record the time when the popup appears
+    start_time = 0.0
+
+    def on_space(event=None):
+        nonlocal start_time
+        start_time = time.time()  # Record the time when the user hits the spacebar
+        prompt_label.config(text=word['prompt'])
+        if word.get('example'):
+            example_label.config(text=f"Example: {word['example']}")
+        entry.focus()
+        root.bind("<Return>", on_submit)  # Bind Enter key to submit
 
     def on_submit(event=None):
         response_time = time.time() - start_time  # Calculate the response time in seconds
+        print(f"Response time: {response_time:.2f} seconds")
         user_input = entry.get()
         if check_answer(word, user_input, response_time):
             result_label.config(text="Correct!")
         else:
             result_label.config(text=f"Try again! Correct answer: {word['answer']}")
+        
         save_data(data, data_file)
         root.after(2000, root.destroy)  # Close after 2 seconds
 
@@ -97,19 +110,19 @@ def show_popup(word):
     root.geometry(f"{POPUP_WIDTH}x{POPUP_HEIGHT}+{POPUP_X}+{POPUP_Y}")
     root.attributes('-topmost', True)
 
-    prompt_label = tk.Label(root, text=word['prompt'], wraplength=POPUP_WIDTH - 20)
+    prompt_label = tk.Label(root, text="Hit Spacebar...", wraplength=POPUP_WIDTH - 20)
     prompt_label.pack(pady=10)
-    if word.get('example'):
-        example_label = tk.Label(root, text=f"Example: {word['example']}", wraplength=POPUP_WIDTH - 20, font=("Helvetica", 10, "italic"))
-        example_label.pack(pady=5)
+    example_label = tk.Label(root, text="", wraplength=POPUP_WIDTH - 20, font=("Helvetica", 10, "italic"))
+    example_label.pack(pady=5)
 
     entry = tk.Entry(root)
     entry.pack(pady=5)
-    entry.bind("<Return>", on_submit)  # Bind Enter key to submit
     submit_button = tk.Button(root, text="Submit", command=on_submit)
     submit_button.pack(pady=5)
     result_label = tk.Label(root, text="")
     result_label.pack(pady=5)
+
+    root.bind("<space>", on_space)  # Bind Spacebar to start the test
     root.mainloop()
 
 # Trigger the popup at regular intervals
@@ -180,11 +193,12 @@ def open_add_words_window():
 
 # Function to select a JSON file
 def select_json_file():
-    global data_file, data
+    global data_file, data, file_label
     file_path = filedialog.askopenfilename(filetypes=[("JSON files", "*.json")])
     if file_path:
         data_file = file_path
         data = load_data(data_file)
+        file_label.config(text=f"Selected File: {file_path.split('/')[-1]}")
 
 # Function to initialize a new JSON file
 def init_json_file():
@@ -201,7 +215,7 @@ def start_cramming_session():
 
 # Main function to start the application
 def main():
-    global data
+    global data, file_label
     data = load_data(data_file)
 
     main_window = tk.Tk()
@@ -222,6 +236,8 @@ def main():
     tk.Button(file_ops_frame, text="Select JSON File", command=select_json_file).pack(pady=5)
     tk.Button(file_ops_frame, text="Init JSON File", command=init_json_file).pack(pady=5)
     tk.Button(file_ops_frame, text="Add Words", command=open_add_words_window).pack(pady=5)
+    file_label = tk.Label(file_ops_frame, text="")
+    file_label.pack(pady=5)
 
     # Section for study and cramming sessions
     session_frame = tk.Frame(main_window)

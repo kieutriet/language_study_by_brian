@@ -5,24 +5,25 @@
             "answer": "add up to",
             "times_tested": 12,
             "consecutive_correct": 12,
-            "next_test_time": "2024-07-22T08:21:31.918850",
+            "next_possible_test_time": "2024-07-22T08:21:31.918850",
             "today_consecutive_correct": 0,
             "results": "+"
         },
         {
             "prompt": "if separate amounts add up to a total amount, together they form that total",
             "answer": "add up to",
-            "times_tested": 11,
-            "consecutive_correct": 11,
-            "next_test_time": "2024-07-03T15:44:27.933173",
-            "today_consecutive_correct": 0
+            "times_tested": 12,
+            "consecutive_correct": 12,
+            "next_possible_test_time": "2025-02-24T02:01:24.521260",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "reply rudely to someone who has more authority than you",
             "answer": "answer back",
             "times_tested": 10,
             "consecutive_correct": 10,
-            "next_test_time": "2024-07-03T13:49:49.831313",
+            "next_possible_test_time": "2024-07-03T13:49:49.831313",
             "today_consecutive_correct": 0
         },
         {
@@ -30,7 +31,7 @@
             "answer": "ask out",
             "times_tested": 11,
             "consecutive_correct": 11,
-            "next_test_time": "2024-07-03T17:03:45.997942",
+            "next_possible_test_time": "2024-07-03T17:03:45.997942",
             "today_consecutive_correct": 0
         },
         {
@@ -38,7 +39,7 @@
             "answer": "back down",
             "times_tested": 14,
             "consecutive_correct": 7,
-            "next_test_time": "2024-07-22T08:23:53.512120",
+            "next_possible_test_time": "2024-07-22T08:23:53.512120",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -47,7 +48,7 @@
             "answer": "back up",
             "times_tested": 10,
             "consecutive_correct": 10,
-            "next_test_time": "2024-07-03T15:59:22.882545",
+            "next_possible_test_time": "2024-07-03T15:59:22.882545",
             "today_consecutive_correct": 0
         },
         {
@@ -55,7 +56,7 @@
             "answer": "back up",
             "times_tested": 10,
             "consecutive_correct": 10,
-            "next_test_time": "2024-07-03T17:07:09.453049",
+            "next_possible_test_time": "2024-07-03T17:07:09.453049",
             "today_consecutive_correct": 0
         },
         {
@@ -63,7 +64,7 @@
             "answer": "black out",
             "times_tested": 6,
             "consecutive_correct": 6,
-            "next_test_time": "2024-07-04T10:42:43.333389",
+            "next_possible_test_time": "2024-07-04T10:42:43.333389",
             "today_consecutive_correct": 0
         },
         {
@@ -71,7 +72,7 @@
             "answer": "black out",
             "times_tested": 9,
             "consecutive_correct": 9,
-            "next_test_time": "2024-07-03T15:47:49.360813",
+            "next_possible_test_time": "2024-07-03T15:47:49.360813",
             "today_consecutive_correct": 0
         },
         {
@@ -79,7 +80,7 @@
             "answer": "blend in",
             "times_tested": 12,
             "consecutive_correct": 12,
-            "next_test_time": "2024-07-22T08:29:45.489933",
+            "next_possible_test_time": "2024-07-22T08:29:45.489933",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -88,7 +89,7 @@
             "answer": "blurt out",
             "times_tested": 9,
             "consecutive_correct": 9,
-            "next_test_time": "2024-07-03T15:39:05.553068",
+            "next_possible_test_time": "2024-07-03T15:39:05.553068",
             "today_consecutive_correct": 0
         },
         {
@@ -96,7 +97,7 @@
             "answer": "board up",
             "times_tested": 9,
             "consecutive_correct": 9,
-            "next_test_time": "2024-10-24T17:18:49.861505",
+            "next_possible_test_time": "2024-10-24T17:18:49.861505",
             "today_consecutive_correct": 1,
             "results": "+"
         },
@@ -105,7 +106,7 @@
             "answer": "break down",
             "times_tested": 6,
             "consecutive_correct": 6,
-            "next_test_time": "2024-07-03T11:51:41.612502",
+            "next_possible_test_time": "2024-07-03T11:51:41.612502",
             "today_consecutive_correct": 0
         },
         {
@@ -113,7 +114,7 @@
             "answer": "break up",
             "times_tested": 10,
             "consecutive_correct": 9,
-            "next_test_time": "2024-07-03T15:46:42.355449",
+            "next_possible_test_time": "2024-07-03T15:46:42.355449",
             "today_consecutive_correct": 0
         },
         {
@@ -121,23 +122,24 @@
             "answer": "break up",
             "times_tested": 6,
             "consecutive_correct": 6,
-            "next_test_time": "2024-07-03T14:28:33.753018",
+            "next_possible_test_time": "2024-07-03T14:28:33.753018",
             "today_consecutive_correct": 0
         },
         {
             "prompt": "if two people break up, they end their relationship",
             "answer": "break up",
-            "times_tested": 11,
-            "consecutive_correct": 11,
-            "next_test_time": "2024-07-03T17:02:36.796334",
-            "today_consecutive_correct": 0
+            "times_tested": 12,
+            "consecutive_correct": 12,
+            "next_possible_test_time": "2025-02-24T01:37:15.558912",
+            "today_consecutive_correct": 0,
+            "results": "+"
         },
         {
             "prompt": "if the weather brightens up, it becomes sunnier",
             "answer": "brighten up",
             "times_tested": 8,
             "consecutive_correct": 7,
-            "next_test_time": "2024-07-03T16:07:53.035688",
+            "next_possible_test_time": "2024-07-03T16:07:53.035688",
             "today_consecutive_correct": 0
         },
         {
@@ -145,7 +147,7 @@
             "answer": "brighten up",
             "times_tested": 6,
             "consecutive_correct": 6,
-            "next_test_time": "2024-07-03T13:51:00.337280",
+            "next_possible_test_time": "2024-07-03T13:51:00.337280",
             "today_consecutive_correct": 0
         },
         {
@@ -153,7 +155,7 @@
             "answer": "brighten up",
             "times_tested": 8,
             "consecutive_correct": 5,
-            "next_test_time": "2024-07-03T16:00:35.897821",
+            "next_possible_test_time": "2024-07-03T16:00:35.897821",
             "today_consecutive_correct": 0
         },
         {
@@ -161,7 +163,7 @@
             "answer": "bring about",
             "times_tested": 11,
             "consecutive_correct": 5,
-            "next_test_time": "2024-07-05T16:39:53.305212",
+            "next_possible_test_time": "2024-07-05T16:39:53.305212",
             "today_consecutive_correct": 0
         },
         {
@@ -169,7 +171,7 @@
             "answer": "bring out",
             "times_tested": 12,
             "consecutive_correct": 3,
-            "next_test_time": "2024-07-21T11:11:24.378732",
+            "next_possible_test_time": "2024-07-21T11:11:24.378732",
             "today_consecutive_correct": 0,
             "results": "-+++"
         },
@@ -178,7 +180,7 @@
             "answer": "bring out",
             "times_tested": 9,
             "consecutive_correct": 5,
-            "next_test_time": "2024-07-22T08:22:43.054195",
+            "next_possible_test_time": "2024-07-22T08:22:43.054195",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -187,7 +189,7 @@
             "answer": "bring together",
             "times_tested": 7,
             "consecutive_correct": 7,
-            "next_test_time": "2024-07-03T15:37:53.196126",
+            "next_possible_test_time": "2024-07-03T15:37:53.196126",
             "today_consecutive_correct": 0
         },
         {
@@ -195,7 +197,7 @@
             "answer": "brush up (on)",
             "times_tested": 10,
             "consecutive_correct": 10,
-            "next_test_time": "2024-07-22T08:27:29.437021",
+            "next_possible_test_time": "2024-07-22T08:27:29.437021",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -204,7 +206,7 @@
             "answer": "build up",
             "times_tested": 6,
             "consecutive_correct": 6,
-            "next_test_time": "2024-07-03T14:24:53.564781",
+            "next_possible_test_time": "2024-07-03T14:24:53.564781",
             "today_consecutive_correct": 0
         },
         {
@@ -212,7 +214,7 @@
             "answer": "build up",
             "times_tested": 5,
             "consecutive_correct": 5,
-            "next_test_time": "2024-07-03T16:06:45.612536",
+            "next_possible_test_time": "2024-07-03T16:06:45.612536",
             "today_consecutive_correct": 0
         },
         {
@@ -220,7 +222,7 @@
             "answer": "build up",
             "times_tested": 7,
             "consecutive_correct": 0,
-            "next_test_time": "2024-07-22T08:23:18.682300",
+            "next_possible_test_time": "2024-07-22T08:23:18.682300",
             "today_consecutive_correct": 0,
             "results": "-"
         },
@@ -229,7 +231,7 @@
             "answer": "build up",
             "times_tested": 9,
             "consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:50:27.162536",
+            "next_possible_test_time": "2024-07-21T11:50:27.162536",
             "today_consecutive_correct": 0,
             "results": "-"
         },
@@ -238,7 +240,7 @@
             "answer": "bump into",
             "times_tested": 5,
             "consecutive_correct": 5,
-            "next_test_time": "2024-07-04T10:29:24.095786",
+            "next_possible_test_time": "2024-07-04T10:29:24.095786",
             "today_consecutive_correct": 0
         },
         {
@@ -246,7 +248,7 @@
             "answer": "bump into",
             "times_tested": 7,
             "consecutive_correct": 1,
-            "next_test_time": "2024-07-21T11:09:34.905454",
+            "next_possible_test_time": "2024-07-21T11:09:34.905454",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -255,7 +257,7 @@
             "answer": "buy off",
             "times_tested": 12,
             "consecutive_correct": 4,
-            "next_test_time": "2024-07-20T22:18:11.234408",
+            "next_possible_test_time": "2024-07-20T22:18:11.234408",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -264,7 +266,7 @@
             "answer": "buy out",
             "times_tested": 6,
             "consecutive_correct": 4,
-            "next_test_time": "2024-07-09T11:31:18.451377",
+            "next_possible_test_time": "2024-07-09T11:31:18.451377",
             "today_consecutive_correct": 0
         },
         {
@@ -272,7 +274,7 @@
             "answer": "buy up",
             "times_tested": 10,
             "consecutive_correct": 4,
-            "next_test_time": "2024-07-20T22:21:12.637517",
+            "next_possible_test_time": "2024-07-20T22:21:12.637517",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -281,7 +283,7 @@
             "answer": "cancel out",
             "times_tested": 11,
             "consecutive_correct": 3,
-            "next_test_time": "2024-07-21T11:46:30.787832",
+            "next_possible_test_time": "2024-07-21T11:46:30.787832",
             "today_consecutive_correct": 0,
             "results": "+++"
         },
@@ -290,7 +292,7 @@
             "answer": "carry over",
             "times_tested": 7,
             "consecutive_correct": 5,
-            "next_test_time": "2024-07-06T15:39:29.528990",
+            "next_possible_test_time": "2024-07-06T15:39:29.528990",
             "today_consecutive_correct": 0
         },
         {
@@ -298,7 +300,7 @@
             "answer": "catch on",
             "times_tested": 10,
             "consecutive_correct": 1,
-            "next_test_time": "2024-07-20T23:24:08.054285",
+            "next_possible_test_time": "2024-07-20T23:24:08.054285",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -307,7 +309,7 @@
             "answer": "catch on",
             "times_tested": 3,
             "consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:06:09.361170",
+            "next_possible_test_time": "2024-07-21T11:06:09.361170",
             "today_consecutive_correct": 0,
             "results": "--"
         },
@@ -316,7 +318,7 @@
             "answer": "center around",
             "times_tested": 6,
             "consecutive_correct": 6,
-            "next_test_time": "2024-07-03T16:10:53.919039",
+            "next_possible_test_time": "2024-07-03T16:10:53.919039",
             "today_consecutive_correct": 0
         },
         {
@@ -324,7 +326,7 @@
             "answer": "chance upon",
             "times_tested": 4,
             "consecutive_correct": 1,
-            "next_test_time": "2024-07-21T11:29:25.438250",
+            "next_possible_test_time": "2024-07-21T11:29:25.438250",
             "today_consecutive_correct": 0,
             "results": "-+"
         },
@@ -333,7 +335,7 @@
             "answer": "change around",
             "times_tested": 8,
             "consecutive_correct": 2,
-            "next_test_time": "2024-07-08T09:25:19.857252",
+            "next_possible_test_time": "2024-07-08T09:25:19.857252",
             "today_consecutive_correct": 0
         },
         {
@@ -341,7 +343,7 @@
             "answer": "change into",
             "times_tested": 10,
             "consecutive_correct": 4,
-            "next_test_time": "2024-07-20T19:07:41.679778",
+            "next_possible_test_time": "2024-07-20T19:07:41.679778",
             "today_consecutive_correct": 0
         },
         {
@@ -349,7 +351,7 @@
             "answer": "change into",
             "times_tested": 13,
             "consecutive_correct": 3,
-            "next_test_time": "2024-07-21T11:40:47.613519",
+            "next_possible_test_time": "2024-07-21T11:40:47.613519",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -358,7 +360,7 @@
             "answer": "change out of",
             "times_tested": 11,
             "consecutive_correct": 5,
-            "next_test_time": "2024-07-21T11:28:38.618380",
+            "next_possible_test_time": "2024-07-21T11:28:38.618380",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -367,23 +369,24 @@
             "answer": "check out",
             "times_tested": 7,
             "consecutive_correct": 4,
-            "next_test_time": "2024-07-06T15:37:53.804724",
+            "next_possible_test_time": "2024-07-06T15:37:53.804724",
             "today_consecutive_correct": 0
         },
         {
             "prompt": "information checks out, you feel that it is true after examining it",
             "answer": "check out",
-            "times_tested": 5,
-            "consecutive_correct": 5,
-            "next_test_time": "2024-07-04T10:49:44.758803",
-            "today_consecutive_correct": 0
+            "times_tested": 6,
+            "consecutive_correct": 0,
+            "next_possible_test_time": "2025-02-24T01:57:38.427840",
+            "today_consecutive_correct": 0,
+            "results": "-"
         },
         {
             "prompt": "reach a particular number or amount",
             "answer": "clock up",
             "times_tested": 9,
             "consecutive_correct": 6,
-            "next_test_time": "2024-07-22T08:33:11.929839",
+            "next_possible_test_time": "2024-07-22T08:33:11.929839",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -392,7 +395,7 @@
             "answer": "close up",
             "times_tested": 11,
             "consecutive_correct": 5,
-            "next_test_time": "2024-07-21T11:41:57.994367",
+            "next_possible_test_time": "2024-07-21T11:41:57.994367",
             "today_consecutive_correct": 0,
             "results": "+"
         },
@@ -402,7 +405,7 @@
             "times_tested": 5,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:15:52.654281",
+            "next_possible_test_time": "2024-07-20T22:15:52.654281",
             "results": "+"
         },
         {
@@ -411,7 +414,7 @@
             "times_tested": 10,
             "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-22T08:17:58.331498",
+            "next_possible_test_time": "2024-07-22T08:17:58.331498",
             "results": "-++"
         },
         {
@@ -420,7 +423,7 @@
             "times_tested": 7,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-22T08:25:09.632873",
+            "next_possible_test_time": "2024-07-22T08:25:09.632873",
             "results": "+"
         },
         {
@@ -429,7 +432,7 @@
             "times_tested": 6,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:35:34.788062",
+            "next_possible_test_time": "2024-07-20T22:35:34.788062",
             "results": "+"
         },
         {
@@ -438,17 +441,17 @@
             "times_tested": 8,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:06:36.580116",
+            "next_possible_test_time": "2024-07-21T11:06:36.580116",
             "results": "++"
         },
         {
             "prompt": "be spoken, heard or understood in a particular way",
             "answer": "come out",
-            "times_tested": 5,
-            "consecutive_correct": 5,
+            "times_tested": 6,
+            "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:33:15.776538",
-            "results": "+"
+            "next_possible_test_time": "2025-02-24T01:55:36.381376",
+            "results": "+-"
         },
         {
             "prompt": "become available to buy or see",
@@ -456,7 +459,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T16:49:18.179437"
+            "next_possible_test_time": "2024-07-20T16:49:18.179437"
         },
         {
             "prompt": "become easy to notice",
@@ -464,7 +467,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T16:44:27.096186"
+            "next_possible_test_time": "2024-07-20T16:44:27.096186"
         },
         {
             "prompt": "result or end in a particular way",
@@ -472,7 +475,7 @@
             "times_tested": 12,
             "consecutive_correct": 3,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:27:29.605903",
+            "next_possible_test_time": "2024-07-21T11:27:29.605903",
             "results": "+++"
         },
         {
@@ -481,7 +484,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-22T08:28:38.569550",
+            "next_possible_test_time": "2024-07-22T08:28:38.569550",
             "results": "+"
         },
         {
@@ -490,7 +493,7 @@
             "times_tested": 6,
             "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:43:24.123479",
+            "next_possible_test_time": "2024-07-21T11:43:24.123479",
             "results": "-++"
         },
         {
@@ -499,16 +502,17 @@
             "times_tested": 5,
             "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:21:16.760647",
+            "next_possible_test_time": "2024-07-21T11:21:16.760647",
             "results": "++"
         },
         {
             "prompt": "think of something such as an idea or plan",
             "answer": "come up with",
-            "times_tested": 3,
-            "consecutive_correct": 3,
+            "times_tested": 4,
+            "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-08T11:25:39.752466"
+            "next_possible_test_time": "2025-02-24T01:56:48.984286",
+            "results": "-"
         },
         {
             "prompt": "become cooler, or make something cooler",
@@ -516,7 +520,7 @@
             "times_tested": 5,
             "consecutive_correct": 1,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:07:17.272020",
+            "next_possible_test_time": "2024-07-21T11:07:17.272020",
             "results": "+"
         },
         {
@@ -525,7 +529,7 @@
             "times_tested": 6,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:50:45.076664",
+            "next_possible_test_time": "2024-07-20T22:50:45.076664",
             "results": "-"
         },
         {
@@ -534,7 +538,7 @@
             "times_tested": 8,
             "consecutive_correct": 1,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:48:05.844321",
+            "next_possible_test_time": "2024-07-21T11:48:05.844321",
             "results": "-+"
         },
         {
@@ -543,7 +547,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:21:43.111940",
+            "next_possible_test_time": "2024-07-21T11:21:43.111940",
             "results": "+"
         },
         {
@@ -552,7 +556,7 @@
             "times_tested": 5,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T23:21:41.264824",
+            "next_possible_test_time": "2024-07-20T23:21:41.264824",
             "results": "-"
         },
         {
@@ -561,7 +565,7 @@
             "times_tested": 5,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-11T01:16:40.332682"
+            "next_possible_test_time": "2024-07-11T01:16:40.332682"
         },
         {
             "prompt": "move to a particular place at the same time as a lot of other people",
@@ -569,7 +573,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:24:26.943682",
+            "next_possible_test_time": "2024-07-21T11:24:26.943682",
             "results": "+"
         },
         {
@@ -578,7 +582,7 @@
             "times_tested": 6,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:53:54.439528",
+            "next_possible_test_time": "2024-07-20T22:53:54.439528",
             "results": "-"
         },
         {
@@ -587,7 +591,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:48:49.594957",
+            "next_possible_test_time": "2024-07-21T11:48:49.594957",
             "results": "+"
         },
         {
@@ -596,7 +600,7 @@
             "times_tested": 7,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:40:07.401882",
+            "next_possible_test_time": "2024-07-21T11:40:07.401882",
             "results": "-"
         },
         {
@@ -605,7 +609,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:44:15.347212",
+            "next_possible_test_time": "2024-07-21T11:44:15.347212",
             "results": "+"
         },
         {
@@ -614,7 +618,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-22T08:30:52.253012",
+            "next_possible_test_time": "2024-07-22T08:30:52.253012",
             "results": "+"
         },
         {
@@ -623,7 +627,7 @@
             "times_tested": 3,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:11:52.992305",
+            "next_possible_test_time": "2024-07-21T11:11:52.992305",
             "results": "-"
         },
         {
@@ -632,7 +636,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:30:55.199438",
+            "next_possible_test_time": "2024-07-20T22:30:55.199438",
             "results": "+"
         },
         {
@@ -641,7 +645,7 @@
             "times_tested": 5,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:46:01.001185"
+            "next_possible_test_time": "2024-07-20T17:46:01.001185"
         },
         {
             "prompt": "get rid of",
@@ -649,7 +653,7 @@
             "times_tested": 0,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-06T17:40:03.694918"
+            "next_possible_test_time": "2024-07-06T17:40:03.694918"
         },
         {
             "prompt": "fasten an item of clothing",
@@ -657,7 +661,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:46:13.711684"
+            "next_possible_test_time": "2024-07-17T16:46:13.711684"
         },
         {
             "prompt": "try to make people support you or buy something from you",
@@ -665,7 +669,7 @@
             "times_tested": 6,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:48:29.177523"
+            "next_possible_test_time": "2024-07-17T16:48:29.177523"
         },
         {
             "prompt": "if something dries up or is dried up, all the water comes out of it",
@@ -673,7 +677,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:57:14.438397"
+            "next_possible_test_time": "2024-07-20T17:57:14.438397"
         },
         {
             "prompt": "stop being available",
@@ -681,7 +685,7 @@
             "times_tested": 11,
             "consecutive_correct": 3,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:49:56.040397",
+            "next_possible_test_time": "2024-07-21T11:49:56.040397",
             "results": "-+++"
         },
         {
@@ -690,16 +694,17 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:34:45.480590",
+            "next_possible_test_time": "2024-07-21T11:34:45.480590",
             "results": "+"
         },
         {
             "prompt": "be in a particular place or state after doing something or because of doing it",
             "answer": "end up",
-            "times_tested": 4,
-            "consecutive_correct": 4,
+            "times_tested": 5,
+            "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T16:48:05.035884"
+            "next_possible_test_time": "2025-02-24T02:00:39.918180",
+            "results": "+"
         },
         {
             "prompt": "accept something and try to deal with it",
@@ -707,7 +712,7 @@
             "times_tested": 3,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:59:38.748908"
+            "next_possible_test_time": "2024-07-20T17:59:38.748908"
         },
         {
             "prompt": "disappear slowly",
@@ -715,7 +720,7 @@
             "times_tested": 5,
             "consecutive_correct": 3,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-22T08:34:23.215137",
+            "next_possible_test_time": "2024-07-22T08:34:23.215137",
             "results": "+"
         },
         {
@@ -724,7 +729,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:36:49.413744",
+            "next_possible_test_time": "2024-07-20T22:36:49.413744",
             "results": "+"
         },
         {
@@ -733,7 +738,7 @@
             "times_tested": 3,
             "consecutive_correct": 3,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:38:11.189953",
+            "next_possible_test_time": "2024-07-21T11:38:11.189953",
             "results": "+"
         },
         {
@@ -742,7 +747,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:52:15.625475",
+            "next_possible_test_time": "2024-07-21T11:52:15.625475",
             "results": "+"
         },
         {
@@ -751,7 +756,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:19:15.311347",
+            "next_possible_test_time": "2024-07-21T11:19:15.311347",
             "results": "+"
         },
         {
@@ -760,7 +765,7 @@
             "times_tested": 2,
             "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:11:43.904391",
+            "next_possible_test_time": "2024-07-21T11:11:43.904391",
             "results": "+"
         },
         {
@@ -769,7 +774,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-10T14:33:00.743905"
+            "next_possible_test_time": "2024-07-10T14:33:00.743905"
         },
         {
             "prompt": "make people understand something",
@@ -777,7 +782,7 @@
             "times_tested": 6,
             "consecutive_correct": 1,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:24:20.046161",
+            "next_possible_test_time": "2024-07-20T22:24:20.046161",
             "results": "+"
         },
         {
@@ -786,7 +791,7 @@
             "times_tested": 3,
             "consecutive_correct": 3,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-18T08:10:46.596531"
+            "next_possible_test_time": "2024-07-18T08:10:46.596531"
         },
         {
             "prompt": "make someone feel sad or lose hope",
@@ -794,7 +799,7 @@
             "times_tested": 4,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-22T08:29:04.906432",
+            "next_possible_test_time": "2024-07-22T08:29:04.906432",
             "results": "-"
         },
         {
@@ -803,7 +808,7 @@
             "times_tested": 1,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:37:36.876320",
+            "next_possible_test_time": "2024-07-20T22:37:36.876320",
             "results": "-"
         },
         {
@@ -812,7 +817,7 @@
             "times_tested": 3,
             "consecutive_correct": 2,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T19:02:07.636822"
+            "next_possible_test_time": "2024-07-20T19:02:07.636822"
         },
         {
             "prompt": "if a train, plane, etc gets into a place, it arrives there",
@@ -820,7 +825,7 @@
             "times_tested": 5,
             "consecutive_correct": 5,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:35:53.206427",
+            "next_possible_test_time": "2024-07-21T11:35:53.206427",
             "results": "+"
         },
         {
@@ -829,7 +834,7 @@
             "times_tested": 8,
             "consecutive_correct": 3,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T10:07:11.874007",
+            "next_possible_test_time": "2024-07-21T10:07:11.874007",
             "results": "+"
         },
         {
@@ -838,7 +843,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:52:32.157258"
+            "next_possible_test_time": "2024-07-20T17:52:32.157258"
         },
         {
             "prompt": "not be punished severely or at all for something you have been accused of",
@@ -846,7 +851,7 @@
             "times_tested": 7,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T17:02:45.605148"
+            "next_possible_test_time": "2024-07-20T17:02:45.605148"
         },
         {
             "prompt": "send something, for example in the post",
@@ -854,7 +859,7 @@
             "times_tested": 4,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T22:25:58.866003",
+            "next_possible_test_time": "2024-07-20T22:25:58.866003",
             "results": "+"
         },
         {
@@ -863,7 +868,7 @@
             "times_tested": 7,
             "consecutive_correct": 4,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:37:02.652993",
+            "next_possible_test_time": "2024-07-21T11:37:02.652993",
             "results": "++"
         },
         {
@@ -872,7 +877,7 @@
             "times_tested": 5,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-21T11:17:24.405615",
+            "next_possible_test_time": "2024-07-21T11:17:24.405615",
             "results": "-"
         },
         {
@@ -881,7 +886,7 @@
             "times_tested": 5,
             "consecutive_correct": 0,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-20T18:58:44.123318"
+            "next_possible_test_time": "2024-07-20T18:58:44.123318"
         },
         {
             "prompt": "change your opinion or decision because someone has persuaded you to agree with them",
@@ -889,8 +894,8 @@
             "times_tested": 7,
             "consecutive_correct": 1,
             "today_consecutive_correct": 0,
-            "next_test_time": "2024-07-17T16:34:48.041826"
+            "next_possible_test_time": "2024-07-17T16:34:48.041826"
         }
     ],
-    "last_checked_date": "2024-10-24"
+    "last_checked_date": "2025-02-24"
 }
