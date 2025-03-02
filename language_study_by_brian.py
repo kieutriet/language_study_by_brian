@@ -15,7 +15,7 @@ POPUP_Y = 800   # Adjust based on screen resolution
 ADD_WINDOW_WIDTH = 800
 ADD_WINDOW_HEIGHT = 700
 MAX_CONSECUTIVE_CORRECT = 5
-NUMBER_OF_WORDS_PER_SESSION = 20
+NUMBER_OF_WORDS_PER_SESSION = 10
 
 stop_event = Event()
 last_checked_date = None
@@ -51,6 +51,14 @@ def schedule_next_test(word, response_time, correct):
     if 'results' not in word:
         word['results'] = ''
 
+    # Update retention
+    if correct:
+        if word['results'] and word['results'][-1] == '+':
+            last_successful_recall = datetime.strptime(word['last_successful_recall'], "%Y-%m-%dT%H:%M:%S.%f")
+            retention_days = (datetime.now() - last_successful_recall).days
+            word['retention_longest'] = max(word['retention_longest'], retention_days)
+        word['last_successful_recall'] = datetime.now().isoformat()
+    
     if correct:
         word['consecutive_correct'] += 1
         word['results'] += '+'
@@ -58,25 +66,32 @@ def schedule_next_test(word, response_time, correct):
         word['consecutive_correct'] = 0
         word['results'] += '-'
 
+
     word['times_tested'] += 1
+    word['accuracy_over_time'] = round(((word['accuracy_over_time'] * (word['times_tested'] - 1)) + (1 if correct else 0)) / word['times_tested'], 2)
+    word['response_time'].append(round(response_time, 2))
+    word['last_check_date'] = datetime.now().isoformat()
 
-
-    # Adjust interval based on performance
-    if word['consecutive_correct'] >= 3:
-        next_interval = timedelta(seconds=POPUP_INTERVAL * 4)
-    elif word['consecutive_correct'] == 2:
-        next_interval = timedelta(seconds=POPUP_INTERVAL * 2)
-    elif response_time < 5:  # 5 seconds
-        next_interval = timedelta(seconds=POPUP_INTERVAL * 1.5)
-    else:
-        next_interval = timedelta(seconds=POPUP_INTERVAL)
-
+    # Adjust interval based on review frequency
+    review_frequencies = {
+        "30-Sec": timedelta(seconds=30),
+        "Minutely": timedelta(minutes=1),
+        "30-Min": timedelta(minutes=30),
+        "Hourly": timedelta(hours=1),
+        "Daily": timedelta(days=1),
+        "3-Day": timedelta(days=3),
+        "Weekly": timedelta(weeks=1),
+        "2-Week": timedelta(weeks=2),
+        "Monthly": timedelta(days=30)
+    }
+    next_interval = review_frequencies.get(word['review_frequency'], timedelta(minutes=1))
 
     word['next_possible_test_time'] = (datetime.now() + next_interval).isoformat()
 
 # Check user input and update progress
 def check_answer(word, user_input, response_time):
     correct = user_input.strip().lower() == word['answer'].strip().lower() or user_input.strip() == '.'
+    word['lastest_response'] = user_input
     schedule_next_test(word, response_time, correct)
     return correct
 
@@ -147,20 +162,22 @@ def add_word(prompt, answer, example=None):
         "prompt": prompt,
         "example": example,
         "answer": answer,
+        "lastest_response": '',
         "times_tested": 0,
         "consecutive_correct": 0,
         "results": '',
         "response_time": [],
         "response_time_trend": 'stable',
         "accuracy_over_time": 0,
-        "accuracy_last_N": 0,
-        "retention_longest": 0,  # number of days able to recall
-        "retention_strength": "Weak",
+        "accuracy_last_session": 0,
+        "retention_longest": 0,         # number of days able to recall
+        "retention_strength": "Weak",   # Weak, Moderate, Strong, Indestructible
+        "retention_score": 0,
         "difficulty_score": 0,
-        "difficulty_level": "Easy", # low response time, high accuracy, high retention
-        "review_frequency": "Minutely", #30-Sec, Minutely, 30-Min, Hourly, Daily, 3-Day, Weekly, 2-Week, Monthly
-        "last_check_date": datetime.now().isoformat(),
-        "last_successful_recall": datetime.now().isoformat(),
+        "difficulty_level": "Easy",     # low response time, high accuracy, high retention
+        "review_frequency": "Minutely", # 30-Sec, Minutely, 30-Min, Hourly, Daily, 3-Day, Weekly, 2-Week, Monthly
+        "last_check_date": datetime.now().isoformat(),          # last time the word was checked
+        "last_successful_recall": datetime.now().isoformat(),   # last time the word was successfully recalled
         "next_possible_test_time": datetime.now().isoformat()
     }
     data['words'].append(new_word)
@@ -213,17 +230,65 @@ def init_json_file():
 def start_cramming_session():
     pass
 
+def start_study_session():
+    global data
+    # data = load_data(data_file)
+    current_date = datetime.now().date()
+
+    # Filter and sort words for the session
+    due_words = [word for word in data['words'] if datetime.fromisoformat(word['next_possible_test_time']).date() <= current_date]
+    due_words.sort(key=lambda word: datetime.fromisoformat(word['last_check_date']))
+    reviewing_list = due_words[:NUMBER_OF_WORDS_PER_SESSION]
+    review_required_list = []
+
+    def check_word(word):
+        show_popup(word)
+        correct = word['results'][-1] == '+'
+        
+        # Log the result
+        with open('session_log.txt', 'a') as log_file:
+            log_file.write(f"{word['prompt']}, {datetime.now().isoformat()}, {word['lastest_response']}, {'Correct' if correct else 'Incorrect'}, {word['response_time'][-1]:.2f}, {word['review_frequency']}\n")
+        
+        # Update word and decide if it needs to be reviewed again
+        if not correct or word['lastest_response'].strip().lower() == 'x':
+            review_required_list.append(word)
+        if word['consecutive_correct'] < 2:
+            review_required_list.append(word)
+        
+        # Update next_possible_test_time
+        if datetime.fromisoformat(word['next_possible_test_time']).date() > current_date:
+            reviewing_list.remove(word)
+        
+        save_data(data, data_file)
+
+    # Initial round
+    for word in reviewing_list:
+        check_word(word)
+    
+    # Queueing for the list
+    while reviewing_list:
+        word = reviewing_list.pop(0)
+        while datetime.fromisoformat(word['next_possible_test_time']) <= datetime.now():
+            check_word(word)
+            break
+        if word not in review_required_list:
+            reviewing_list.append(word)
+    
+    # Export Review Required list
+    with open('review_required_list.json', 'w') as review_file:
+        json.dump([word['prompt'] for word in review_required_list], review_file)
+
 # Main function to start the application
 def main():
     global data, file_label
     data = load_data(data_file)
 
     main_window = tk.Tk()
-    main_window.title("Language Study App")
+    main_window.title("Language Study App by Brian")
     main_window.geometry("500x300")
 
-    def start_study_session():
-        study_thread = Thread(target=start_popup_timer)
+    def start_study_session_thread():
+        study_thread = Thread(target=start_study_session)
         study_thread.start()
 
     def terminate_program():
@@ -242,7 +307,7 @@ def main():
     # Section for study and cramming sessions
     session_frame = tk.Frame(main_window)
     session_frame.pack(pady=10)
-    tk.Button(session_frame, text="Start Chill Session", command=start_study_session).pack(pady=5)
+    tk.Button(session_frame, text="Start Chill Session", command=start_study_session_thread).pack(pady=5)
     tk.Button(session_frame, text="Start Intensive Session", command=start_cramming_session).pack(pady=5)
 
     # Section for termination
